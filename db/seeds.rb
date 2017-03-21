@@ -1,3 +1,4 @@
+Profile.delete_all
 User.delete_all
 Product.delete_all
 
@@ -25,14 +26,12 @@ Profile.create!(
   last_name: Faker::Name.name,
   delivery_address: "#{Faker::Address.street_address} #{Faker::Address.city} (#{Faker::Address.country})",
 )
-
 Profile.create!(
   user: User.second,
   first_name: Faker::Name.name,
   last_name: Faker::Name.name,
   delivery_address: "#{Faker::Address.street_address} #{Faker::Address.city} (#{Faker::Address.country})",
 )
-
 Profile.create!(
   user: User.third,
   first_name: Faker::Name.name,
