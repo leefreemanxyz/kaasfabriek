@@ -5,13 +5,18 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
-    @items = @cart.items 
+    @items = @cart.items
   end
 
   def show #shows just one product
     @product = Product.find(params[:id])
     @cart = Cart.new
 
-    debugger
+    
   end
+
+  def index
+    @products = Product.all
+  end
+
 end
