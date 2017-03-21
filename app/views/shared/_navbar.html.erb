@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -10,10 +10,15 @@
       <%= link_to "Kaas Fabriek", root_path, class: "navbar-brand" %>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <% current_path = request.env['PATH_INFO'] %>
+        <li class="<%= current_path == root_path ?  "active"  : "" %>"><%= link_to "Home", root_path %></li>
+        <li class="<%= current_path == products_path ?  "active"  : "" %>"><%= link_to "Products", products_path %></li>
+      </ul>
       <ul class="nav navbar-nav navbar-right">
         <% if !user_signed_in? %>
-          <li><%= link_to "Log In", new_user_session_path %></li>
-          <li><%= link_to "Sign Up", new_user_registration_path %></li>
+          <li class="<%= current_path == new_user_session_path ?  "active"  : "" %>"><%= link_to "Log In", new_user_session_path %></li>
+          <li class="<%= current_path == new_user_registration_path ?  "active"  : "" %>"><%= link_to "Sign Up", new_user_registration_path %></li>
         <% else %>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -21,7 +26,14 @@
               <span class="caret"></span>
             </a>
             <u class="dropdown=menu">
-              <!-- Fill in dropdown -->
+              <% if current_user.has_profile? %>
+                <li><%= link_to "Edit Profile", edit_profile_path(current_user.profile) %></li>
+              <% else %>
+                <li><%= link_to "Create Profile", new_profile_path %></li>
+              <% end %>
+              <li><%= link_to "Edit Password", edit_user_registration_path %></li>
+              <li role="separator" class="divider"></li>
+              <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
             </u>
           </li>
         <% end %>
