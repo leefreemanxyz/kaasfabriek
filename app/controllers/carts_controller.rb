@@ -1,13 +1,15 @@
 class CartsController < ApplicationController
-  before_action set_cart
+  include CurrentCart
+
+  before_action :set_cart
 
   def create
-    @cart << params[:product_id, :quantity]
+    @product = Product.find(params[:product_id])
+    @cart.add_item(@product)
+    redirect_to root_path, notice:"Item successfully added"
   end
 
 
-  private
-    def set_cart
-      @cart = session[:cart] ||= []
-    end
+
+
 end
