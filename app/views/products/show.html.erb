@@ -4,5 +4,6 @@
     <img class="img-thumbnail" alt="200 x 200" style="width: 200px; height: 200px;" />
     <h3><%= @product.name %></h3>
     <p><%= @product.shortdescription %></p>
+    <%= link_to "Buy me", add_to_cart_path(@product.id), method: :post %>
   </div>
 </div>
