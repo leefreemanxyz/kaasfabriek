@@ -19,6 +19,9 @@ gem 'bootstrap-sass', '~> 3.3.6'
 
 gem 'devise', '~> 4.2'
 
+# Use CarrierWave for managing the photos
+gem 'carrierwave', '0.11.2'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
