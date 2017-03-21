@@ -1,5 +1,4 @@
 class Cart
-  belongs_to :product
   attr_reader :items
   def initialize(cart)
     @items = []
