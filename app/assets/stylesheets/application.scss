@@ -1,2 +1,40 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+
+.col-sm-4 {
+  width: 33.33333333%;
+}
+
+h3 {
+    display: block;
+    font-size: 1.17em;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+.panel-default{
+  border-color: #DCDCDC;
+}
+
+.panel {
+  margin-bottom: 20px;
+  background-color: #6495ED;
+  border: 1px;
+  border-radius: 4px;
+}
+
+.panel-primary.panel-heading{
+  color: #fff;
+  background-color: #6495ED;
+  border-color: #DCDCDC;
+}
+
+.panel-head {
+  padding: 10px;
+  border-bottom: 1px solid;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
