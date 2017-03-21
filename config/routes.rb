@@ -5,4 +5,5 @@ Rails.application.routes.draw do
 
   resources :order_items, :orders, :products, :profiles, :photos, :carts
 
+ post ':product_id/add' => 'shopping_cart#create', as: :add_to_cart
 end
