@@ -18,22 +18,7 @@ body > .container{
 h1, h2, h3, h4 {
 font-family: 'Audiowide', cursive;
 }
-h3 {
-    display: block;
-    font-size: 1.17em;
-    -webkit-margin-before: 1em;
-    -webkit-margin-after: 1em;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
-    font-weight: bold;
-}
-.panel {
-  margin-bottom: 20px;
-  background-color: #D3D3D3;
-  border: 1px;
-  border-radius: 4px;
-  min-height: 300px;
-}
+
 .footer {
   position: absolute;
   bottom: 0;
