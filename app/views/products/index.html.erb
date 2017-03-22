@@ -1,11 +1,17 @@
 <h1> Kaasfabriek Products</h1>
 
-<% @products.each do |product| %>
-  <div class="panel panel-primary">
-    <h3><%= product.name %></h3>
-    <p><%= product.shortdescription %></p>
-    <p><%= product.price %></p>
-    <%= link_to "Buy me", add_to_cart_path(product.id), method: :post %>
+<div class="container">
+<div class="row">
+  <% @products.each do |product| %>
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class= "panel-heading"><h3><%= product.name %></h3></div>
+        <%= product.shortdescription %>
+        <P><%= product.price %></p>
+        </div>  
+        <%= link_to "Product Details", product, class: "btn btn-primary" %>
 
-  </div>
-<% end %>
+    </div>
+  <% end %>
+</div>
+</div>
