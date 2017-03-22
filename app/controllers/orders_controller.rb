@@ -1,9 +1,9 @@
 class OrdersController < ApplicationController
-  before_action :set_order
+  before_action :set_cart
   def new
     @order = User.orders.new
     @cart_items.each do |product|
-      @order.order_items.new(product:product)
+    @order.order_items.new(product:product)
     end
   end
 

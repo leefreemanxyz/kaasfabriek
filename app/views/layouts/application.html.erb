@@ -9,8 +9,13 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-    <%= yield %>
+    <%= render 'shared/navbar' %>
+
+    <div class="container">
+      <%= render 'shared/flash-alerts' %>
+
+      <%= yield %>
+    </div>
+    <%= render 'shared/footer' %>
   </body>
 </html>
