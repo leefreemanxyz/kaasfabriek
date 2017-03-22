@@ -1,27 +1,17 @@
 <h1> Kaasfabriek Products</h1>
 
-<br>
-
+<div class="container">
+<div class="row">
   <% @products.each do |product| %>
-  <div class="col-sm-4">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3 class="panel-title"><%= product.name %></h3></div>
-          <div class="panel-body">
-          <p><%= product.shortdescription %></p>
-          <P><%= product.price %></p>
-          </div>
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class= "panel-heading"><h3><%= product.name %></h3></div>
+        <%= product.shortdescription %>
+        <P><%= product.price %></p>
+        </div>  
+        <%= link_to "Product Details", product, class: "btn btn-primary" %>
 
     </div>
-      <div class="col-sm-4">
-      <%= link_to "Product Details", product, class: "btn btn-primary" %>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-  <br>
-<% end %>
+  <% end %>
+</div>
+</div>
