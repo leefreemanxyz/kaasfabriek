@@ -6,4 +6,13 @@ class User < ApplicationRecord
 
   has_one :profile
   has_many :orders
+
+def has_profile?
+  profile.present? && !profile.id.nil?
+end
+
+def full_name
+  profile.full_name
+end
+
 end

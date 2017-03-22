@@ -6,11 +6,13 @@
     <div class="col-md-4">
       <div class="panel panel-default">
         <div class= "panel-heading"><h3><%= product.name %></h3></div>
-        <%= product.shortdescription %>
-        <P><%= product.price %></p>
-        </div>  
-        <%= link_to "Product Details", product, class: "btn btn-primary" %>
-
+        <div class="panel-body">
+          <p><%= product.shortdescription %></p>
+        </div>
+      </div>
+      <p><%= product.price %></p>
+      <%= link_to "Product Details", product, class: "btn btn-primary" %>
+      <hr style="border-top: 1px solid #000;">
     </div>
   <% end %>
 </div>
