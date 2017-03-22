@@ -21,14 +21,18 @@ h3 {
 
 .panel {
   margin-bottom: 20px;
-  background-color: #6495ED;
+  background-color: #D3D3D3;
   border: 1px;
   border-radius: 4px;
+  min-height: 300px;
 }
 
-.panel-primary.panel-heading{
-  color: #fff;
-  background-color: #6495ED;
+.panel-primary {
+  border-color: #337ab7;
+}
+
+.panel-heading{
+  color: #6495ED;
   border-color: #DCDCDC;
 }
 
@@ -37,4 +41,15 @@ h3 {
   border-bottom: 1px solid;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
+}
+
+.panel-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    color: inherit;
+}
+
+.btn {
+  margin: 0 auto;
 }
