@@ -13,7 +13,6 @@ class Cart
     product = Product.find(product)
     item = CartItem.new(product)
     @items << item
-    debugger
 
     #item = {"product_id"=>product.id, "amount"=> amount}
     #if shopping_cart have key + 1, else add
