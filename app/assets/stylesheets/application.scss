@@ -2,6 +2,7 @@
 @import "bootstrap";
 
 @import url('https://fonts.googleapis.com/css?family=Audiowide|Comfortaa');
+@import "products";
 
 html {
   position: relative;
@@ -35,10 +36,6 @@ font-family: 'Audiowide', cursive;
 .text-muted span {
   font-size: 80%
 }
-.index-product-img {
-    width: 100%;
-}
-@import "products";
 // .panel-default{
 //   border-color: #DCDCDC;
 // }
