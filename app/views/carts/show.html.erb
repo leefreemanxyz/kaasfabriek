@@ -1,8 +1,9 @@
 <h3>Your cart</h3>
-
-<%= @cart.each do |item| %>
+<table>
+<% @cart.each do |item| %>
 <tr>
-  <td><%= item.product_id %></td>
-  <td><%= item.quantity %></td>
+  <td><%= item["name"] %></td>
+  <td><%=%> </td>
 </tr>
 <% end %>
+</table>
