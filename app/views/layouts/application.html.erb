@@ -3,14 +3,11 @@
   <head>
     <title>Kaasfabriek</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
     <%= render 'shared/navbar' %>
-
     <div class="container">
       <div class="row row-offcanvas row-offcanvas-right" >
         <%= render 'shared/flash-alerts' %>
@@ -19,7 +16,7 @@
           <%= yield %>
         </div>
         <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
-          <%#= render 'shared/cart' %>
+          <%= render 'shared/cart' %>
         </div>
       </div>
     </div>
