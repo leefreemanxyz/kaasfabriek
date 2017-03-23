@@ -3,6 +3,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Audiowide|Comfortaa');
 @import "products";
+@import "carts";
 
 html {
   position: relative;
@@ -14,12 +15,14 @@ body {
 }
 
 body > .container{
-  padding-top: 60px;
+  padding: 60px 0;
 }
 h1, h2, h3, h4 {
 font-family: 'Audiowide', cursive;
 }
-
+#sidebar {
+  margin-top: 69px;
+}
 .footer {
   position: absolute;
   bottom: 0;

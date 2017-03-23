@@ -12,12 +12,7 @@
       <div class="row row-offcanvas row-offcanvas-right" >
         <%= render 'shared/flash-alerts' %>
 
-        <div class="col-xs-12 col-sm-9">
-          <%= yield %>
-        </div>
-        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
-          <%= render 'shared/cart' %>
-        </div>
+        <%= yield %>
       </div>
     </div>
     <%= render 'shared/footer' %>
