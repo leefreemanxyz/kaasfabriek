@@ -5,8 +5,13 @@ class CartsController < ApplicationController
 
   def create
     @product = Product.find(params[:product_id])
-    @cart.add_item(@product)
+    session[:shopping_cart] << (params[:product_id])
     redirect_to root_path, notice:"Item successfully added"
+  end
+
+  def show
+    debugger
+    @cart
   end
 
 
