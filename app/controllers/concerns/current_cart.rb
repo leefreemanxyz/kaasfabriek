@@ -6,7 +6,8 @@ module CurrentCart
 
   def set_cart
     session[:shopping_cart] ||= []
-    @cart = session[:shopping_cart]
+    @cart ||= Cart.new(session[:shopping_cart])
+
 
   end
 end
