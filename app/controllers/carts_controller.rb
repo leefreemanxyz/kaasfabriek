@@ -10,7 +10,6 @@ class CartsController < ApplicationController
   end
 
   def show
-    debugger
     @cart
   end
 
