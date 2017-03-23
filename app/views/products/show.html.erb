@@ -1,7 +1,8 @@
-<div class="panel panel-primary">
-
-  <div class="panel-body">
-    <img class="img-thumbnail" alt="200 x 200" style="width: 200px; height: 200px;" />
+<div class="row" style="background-color: lightgrey;">
+  <div class="col-md-6">
+    <%= image_tag @product.photos.first.image.show_view, class: "img-thumbnail" %>
+  </div>
+  <div class="col-md-6">
     <h3><%= @product.name %></h3>
     <p><%= @product.shortdescription %></p>
     <%= link_to "Buy me", add_to_cart_path(@product.id), method: :post %>
