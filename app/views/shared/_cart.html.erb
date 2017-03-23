@@ -1,13 +1,11 @@
-<div class="list-group">
-  <%= @cart.items %>
-  <a href="#" class="list-group-item active">Shopping Cart Total</a>
-
-
-
-
-
-
-
-    <!-- <%#= @items.each do |item| %>
-    <p><%# product.name %>
-     -->
+<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
+  <div class="list-group">
+    <%= link_to "Shopping Cart", cart_path, class: "list-group-item active" %>
+    <% @cart.items.each do |item| %>
+      <a href="#" class="list-group-item">
+        1x&emsp;<%= item.name %><span style="float: right;"><%= number_to_currency(item.price, unit: "€") %></span>
+      </a>
+    <% end %>
+    <a href="#" class="list-group-item active">Total: <span style="float:right;font-weight:bold;"><%= number_to_currency(@cart.total_price, unit: "€") %></a>
+  </div>
+</div>

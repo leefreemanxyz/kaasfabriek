@@ -1,9 +1,21 @@
-<h3>Your cart</h3>
-<table>
-<% @cart.each do |item| %>
-<tr>
-  <td><%= item["name"] %></td>
-  <td><%=%> </td>
-</tr>
-<% end %>
+<h1>Your cart</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <td>Product</td>
+      <td>Qty</td>
+      <td>Price</td>
+      <td>Total Price</td>
+    </tr>
+  </thead>
+  <tbody>
+  <% @cart.items.each do |item| %>
+    <tr>
+      <td><%= item.name %></td>
+      <td>1</td>
+      <td><%= number_to_currency(item.price, unit: "€ ") %></td>
+      <td><%= number_to_currency(item.price, unit: "€ ") %></td>
+    </tr>
+  <% end %>
+  </tbody>
 </table>

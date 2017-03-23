@@ -1,11 +1,15 @@
-<h1><%= @product.name %></h1>
+<div class="col-xs-12 col-sm-9">
+  <h1><%= @product.name %></h1>
 
-<div class="row" style="background-color: lightgrey;">
-  <div class="col-md-6">
-    <%= image_tag @product.photos.first.image.show_view, class: "img-thumbnail" %>
-  </div>
-  <div class="col-md-6">
-    <p><%= @product.shortdescription %></p>
-    <%= link_to "Buy me", add_to_cart_path(@product.id), method: :post %>
+  <div class="row">
+    <div class="col-md-6">
+      <%= image_tag @product.photos.first.image.show_view, class: "img-thumbnail" %>
+    </div>
+    <div class="col-md-6">
+      <h3>Description</h3>
+      <p><%= @product.description %></p>
+      <%= link_to "Buy me", add_to_cart_path(@product.id), method: :post, class: "btn btn-success" %>
+    </div>
   </div>
 </div>
+<%= render 'shared/cart' %>
