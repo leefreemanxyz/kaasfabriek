@@ -1,3 +1,4 @@
+Photo.delete_all
 Profile.delete_all
 User.delete_all
 Product.delete_all
@@ -47,7 +48,7 @@ Photo.create!(
 )
 
 Photo.create!(
-  image:"http://res.cloudinary.com/dmagtxb3l/image/upload/v1490201326/Cheese1_obmnqr.jpg",
+  remote_image_url:"http://res.cloudinary.com/dmagtxb3l/image/upload/v1490201326/Cheese1_obmnqr.jpg",
   product: products[1],
   profile: nil,
 )
