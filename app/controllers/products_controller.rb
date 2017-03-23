@@ -5,7 +5,6 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
-    @items = @cart.items
   end
 
   def show #shows just one product
