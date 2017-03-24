@@ -4,36 +4,37 @@ class Cart
     @items = []
 
     session.each do |item|
-      product = Product.find(item)
-      add_item(product)
+      #product = Product.find(["product_id"])
+      add_item(item["product_id"], item["amount"])
     end
     calculate_total_price
   end
 
-  def add_item(product, amount = 1)
-    product = Product.find(product)
-    item = CartItem.new(product)
+  def add_item(id, amount = 1)
+    id = id.to_i
+    product = Product.find(id)
+    item = CartItem.new(product, amount)
     @items << item
-
-    #item = {"product_id"=>product.id, "amount"=> amount}
-    #if shopping_cart have key + 1, else add
   end
 
   def calculate_total_price
     @total_price = 0.0
-    @items.each { |item| @total_price += item.price }
+    @items.each do |item|
+      @total_price += item.product.price
+    end
   end
 
 end
 
 class CartItem
-  attr_reader :product, :name, :price
+  attr_reader :product_id, :amount
 
-  def initialize(product)
-    @product = product
-    @name = product.name
-    @price = product.price
-
+  def initialize(product, amount)
+    @product_id = product.id
+    @amount = amount
   end
 
+  def product
+    Product.find(@product_id)
+  end
 end
