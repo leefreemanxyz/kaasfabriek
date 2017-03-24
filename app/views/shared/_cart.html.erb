@@ -4,7 +4,7 @@
     <% if (@cart.items.length > 0)  %>
       <% @cart.items.each do |item| %>
         <a href="#" class="list-group-item">
-          <%= item.amount %>x&emsp;<%= item.product.name %><span style="float: right;"><%= number_to_currency(item.product.price, unit: "€") %></span>
+          <%= item.amount %>x&emsp;<%= item.product.name %><span style="float: right;"><%= number_to_currency(item.item_total_price, unit: "€") %></span>
         </a>
         <% end %>
       <%  else  %>
