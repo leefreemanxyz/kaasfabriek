@@ -6,7 +6,7 @@
 
 	  function productFilter(header, product) {
 		var form = $("<form>").attr({"class":"filterform","action":"#"}),
-			input = $("<input>").attr({"class":"filterinput","type":"text"});
+			input = $("<input>").attr({"class":"filterinput","style":"font-size:14px","type":"text","placeholder":"search here :)"});
 		$(form).append(input).appendTo(header);
 
 		$(input)
