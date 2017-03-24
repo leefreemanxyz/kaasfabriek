@@ -13,7 +13,7 @@
         </div>
         <p><%= number_to_currency(product.price, unit: "€ ") %></p>
         <%= link_to "Product Details", product, class: "btn btn-primary" %>
-        <%= link_to "Buy Me", add_to_cart_path(product.id), method: :post, class: "btn btn-success" %>
+        <%= link_to "Buy One", add_to_cart_path(product.id), method: :post, class: "btn btn-success" %>
         <hr style="border-top: 1px solid #000;">
       </div>
     <% end %>
